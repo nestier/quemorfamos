@@ -17,5 +17,6 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     url(r'^index/', 'apps.recipesbook.views.index', name='recipesbook_index'),
-    url(r'^/', 'apps.recipesbook.views.index', name='recipesbook_index'),
+    url(r'^$', 'apps.recipesbook.views.index', name='recipesbook_index'),
+    url(r'^recipe/show/(?P<recipe_id>\d+)/$', 'apps.recipesbook.views.show', name='recipesbook_show'),
 ]
