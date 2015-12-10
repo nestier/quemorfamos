@@ -14,7 +14,6 @@ def index(request):
 
 def show(request, recipe_id):
     recipe = Recipe.objects.filter(id = recipe_id).first()
-    amount = recipe.amount_set.all()
-    ingredients= recipe.ingredients.all()
-    return render (request, 'recipesbook/show.html', {'recipe': recipe, 'ingredients':ingredients})
+    amounts = recipe.amount_set.all()
+    return render (request, 'recipesbook/show.html', {'recipe': recipe, 'amounts': amounts})
 

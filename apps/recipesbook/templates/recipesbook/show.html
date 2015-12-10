@@ -1,10 +1,15 @@
 {% if recipe %}
-    {{ recipe.title }}
-    <ul>
-    {% for ingredient in ingredients %}
-    <li>{{ ingredient.name }}</li>
+    <table>
+    <h1> {{ recipe.title }}</h1>
+    <tr>
+    <td>name</td><td>amount</td>
+    </tr>
+    {% for amount in amounts %}
+    <tr><td>{{ amount.ingredient.name }}</td>
+    <td>{{ amount.cant }}</td></tr>
     {% endfor %}
     </ul>
+  </table>
 {% else %}
     <p>No recipe are available.</p>
 {% endif %}
