@@ -16,6 +16,6 @@ Including another URLconf
 from django.conf.urls import include, url
 
 urlpatterns = [
-    url(r'^index/', 'quemorfamos.apps.recipesbook.views.index', name='recipesbook_index'),
-    url(r'^/', 'quemorfamos.apps.recipesbook.views.index', name='recipesbook_index'),
+    url(r'^index/', 'apps.recipesbook.views.index', name='recipesbook_index'),
+    url(r'^/', 'apps.recipesbook.views.index', name='recipesbook_index'),
 ]
